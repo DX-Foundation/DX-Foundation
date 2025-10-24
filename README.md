@@ -8,9 +8,8 @@
 ![Плагины](https://img.shields.io/badge/🔌-Плагины-blue)
 ![Русский](https://img.shields.io/badge/🇷🇺-Русский-cyan)
 
-**Официальные плагины от DX Foundation для SCP: Secret Laboratory**
+**Плагины DX Foundation для SCP: Secret Laboratory**
 
-*✨ Специальная хэллоуинская версия 2025! ✨*
 
 </div>
 
@@ -32,10 +31,3 @@
 
 </div>
 
-**Все разработчики равны и вносят свой вклад в создание качественных плагинов.**
-
-## 🚀 Быстрый старт
-
-```bash
-git clone https://github.com/DXFoundationTeam/dx-foundation-plugins.git
-cd dx-foundation-plugins
