@@ -1,0 +1,50 @@
+name: 🎃 DX Foundation AutoBuild 2025
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'  # Ежедневно в полночь
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: 🎃 Сборка плагинов DX Foundation 2025
+    
+    steps:
+    - name: 🎃 Начало сборки DX Foundation
+      run: |
+        echo "👻 DX Foundation 2025 - начало сборки плагинов..."
+        echo "🕷️ Время: $(date)"
+        echo "🎃 Хэллоуин 2025"
+        echo "🏢 Организация: DX Foundation"
+        
+    - name: 📥 Клонируем репозиторий
+      uses: actions/checkout@v3
+      
+    - name: 🎯 Проверяем структуру
+      run: |
+        echo "📁 Проверяем файлы DX Foundation..."
+        ls -la
+        echo "👨‍💻 Команда DX Foundation"
+        
+    - name: 📦 Создаем архив
+      run: |
+        TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+        tar -czf dx-foundation-plugins-$TIMESTAMP.tar.gz плагины/ README.md
+        echo "📦 Архив создан"
+        
+    - name: 🚀 Загружаем артефакты
+      uses: actions/upload-artifact@v3
+      with:
+        name: dx-foundation-plugins-2025
+        path: *.tar.gz
+        retention-days: 30
+        
+    - name: 📊 Генерируем отчет
+      run: |
+        echo "📊 Отчет DX Foundation 2025:"
+        echo "👉 Количество плагинов: $(find плагины/ -type d -mindepth 1 | wc -l)"
+        echo "🏢 Организация: DX Foundation"
+        echo "🎃 Год: 2025"
+        echo "✅ Сборка завершена успешно!"
